@@ -2,10 +2,9 @@ import { useState } from "react";
 import Container from "../components/Container";
 import ImageUpload from "../components/ImageUpload";
 import UploadContainer from "../components/UploadContainer";
-import jsPDF, { AcroFormCheckBox } from "jspdf";
+import jsPDF from "jspdf";
 import SubmitButton from "../components/SubmitButton";
 import Inputfield from "../components/Inputfield";
-import styled from "styled-components";
 
 export default function Home() {
   const [selectedImages, setSelectedImages] = useState(null);
@@ -34,14 +33,14 @@ export default function Home() {
   };
 
   const generatePDF = () => {
-    setColor("#f6a201");
     var doc = new jsPDF("p", "px", "a4");
+    var pageWidth = 447;
+    var pageRand = 35;
+    // setColor("#f6a201");
     var bestätigung = doc.splitTextToSize(
       "Hiermit bestätigen wir Ihnen, dass Sie die angekreuzten Positionen nach Check-Out des Gastes uns an die o.g. Adresse in Rechnung stellen dürfen.",
       530
     );
-    var pageWidth = 447;
-    var pageRand = 35;
     doc.addImage(
       `${selectedImages}`,
       "PNG",
