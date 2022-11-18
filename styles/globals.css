@@ -15,12 +15,30 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+h1 {
+  font-size: 2rem;
+  color: #fff;
 }
+
+input::-webkit-file-upload-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 7px;
+}
+
+input {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.upload {
+  height: 10rem;
+  width: 10rem;
+}
+
+label {
+  font-size: 13px;
+  color: #fff;
+}
+
