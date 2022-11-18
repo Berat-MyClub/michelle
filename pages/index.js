@@ -34,6 +34,7 @@ export default function Home() {
 
   const generatePDF = () => {
     var doc = new jsPDF("p", "px", "a4");
+    doc.setTextColor('#000');
     var pageWidth = 447;
     var pageRand = 35;
     // setColor("#f6a201");
